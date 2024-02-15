@@ -1,0 +1,74 @@
+
+#skulpt_canvas_output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 50vh;
+    canvas{
+        max-width: 75% !important;
+        max-height: 75vh !important;
+        position: absolute !important;
+        margin-top: 0 !important;
+    }
+}
+
+#plotting_output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .plot_canvas_handler{
+        bottom: 1.5rem !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    canvas{
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+    div{
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+    }
+}
+
+button.fa-arrows {
+    display: none !important;
+}
+
+.ace_editor,
+.ace_editor * {
+	font-family: "Monaco", "Menlo", "Ubuntu Mono", "Droid Sans Mono", "Consolas",
+		monospace !important;
+	letter-spacing: 0 !important;
+}
+
+.cm-scroller{
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.cm-activeLine, .cm-activeLineGutter, .cm-gutters{
+    background-color: transparent !important;
+}
+.cm-editor{
+    border: 1px solid gray !important;
+    padding: 2px;
+}
+.parentBox .output{
+    background-color: transparent !important;
+}
+
+.py-terminal-docked{
+    display: none !important;
+}
+
