@@ -32,7 +32,8 @@ function IDEHeader({ }: Props) {
           <HomeIcon sx={{
           }} />
         </a>
-        Python Notebook</h3>      <Stack direction={'row'} spacing={2}>
+        Python IDE
+        </h3>      <Stack direction={'row'} spacing={2}>
         <ToggleButton
           style={{ borderRadius: "50px", border: "none" }}
           value="check"

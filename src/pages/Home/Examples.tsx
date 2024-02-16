@@ -58,6 +58,111 @@ data.plot()
 pyplot.show()`
     },
     {
+        title:"Box Plot using pandas and matplotlib",
+        description:"Generate a box plot using Pandas and Matplotlib library in Python.",
+        image:"/images/examples/box_plot.png",
+        code:`import requests
+import pandas
+import io
+import matplotlib.pyplot as pyplot
+content=requests.get("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv").text
+data=pandas.read_csv(io.StringIO(content))
+data.boxplot()
+pyplot.show()`
+    },
+    {
+        title:"Normal data distribution and histogram using Numpy and Matplotlib",
+        description:"Generate a normal data distribution and histogram using Numpy and Matplotlib library in Python.",
+        image:"/images/examples/normal_data_histogram.png",
+        code:`import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.normal(5.0, 1.0, 100000)
+
+plt.hist(x, 100)
+plt.show()`
+    },
+    {
+        title:"Pie Chart using Matplotlib",
+        description:"Generate a pie chart using Matplotlib library in Python",
+        image:"/images/examples/pie_chart.png",
+        code:`import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode)
+plt.show() `
+    },
+    {
+        title:"Classification Report using Scikit-learn",
+        description:"Generate a classification report using Scikit-learn library in Python.",
+        image:"/images/examples/classification_report.png",
+        code:`import numpy as np
+from sklearn.metrics import confusion_matrix
+
+actual = np.array(['Dog','Dog','Dog','Not Dog','Dog','Not Dog','Dog','Dog','Not Dog','Not Dog'])
+predicted = np.array(['Dog','Not Dog','Dog','Not Dog','Dog','Dog','Dog','Dog','Not Dog','Not Dog'])
+print(classification_report(actual, predicted))`
+    },
+    {
+        title:"Confusion Matrix using Scikit-learn",
+        description:"Generate a confusion matrix using Scikit-learn library in Python.",
+        image:"/images/examples/confusion_matrix.png",
+        code:`import matplotlib.pyplot as plt
+import numpy
+from sklearn import metrics
+
+actual = numpy.random.binomial(1,.9,size = 1000)
+predicted = numpy.random.binomial(1,.9,size = 1000)
+
+confusion_matrix = metrics.confusion_matrix(actual, predicted)
+
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
+
+cm_display.plot()
+plt.show()`
+    },
+    {
+        title:"Linear Regression using Statsmodels",
+        description:"Perform linear regression using Statsmodels library in Python.",
+        image:"/images/examples/linear_regression.png",
+        code:`import matplotlib.pyplot as plt
+from scipy import stats
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+def myfunc(x):
+    return slope * x + intercept
+
+mymodel = list(map(myfunc, x))
+
+plt.scatter(x, y)
+plt.plot(x, mymodel)
+plt.show()`
+    },
+    {
+        title:"K-Means Clustering using Scikit-learn",
+        description:"Perform K-Means clustering using Scikit-learn library in Python.",
+        image:"/images/examples/k_means.png",
+        code:`from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+data = list(zip(x, y))
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+
+plt.scatter(x, y, c=kmeans.labels_)
+plt.show()`
+    },
+    {
         title:"Matplotlib Bar Plot",
         description:"Plot a simple bar plot using Matplotlib library in Python.",
         image:"/images/examples/matplotlib_bar_chart.png",
