@@ -1,7 +1,7 @@
 # Python Coding IDE
 ### A web based code editor for python
 
-live demo 👉 [https://python-online-editor.web.app/](https://python-online-editor.web.app/)
+live demo 👉 [https://python-ide-by-neha.web.app](https://python-ide-by-neha.web.app)
 
 
 ```
